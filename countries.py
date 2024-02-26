@@ -18,17 +18,21 @@ with open(filename) as country_file:
         }
         print(country_dict)
         countries[country.casefold()] = country_dict
+        countries[code.casefold()] = country_dict
 
 
-print(countries)
+# print(countries)
 
-while True:
-    chosen_country = input("Please select the country name ").casefold()
-    if chosen_country in countries:
-        country_data = countries[chosen_country]
-        print(f"The capital city is {country_data['capital']}")
-    elif chosen_country == 'quit':
-        break
+for country, data in countries.items(0):
+    print(country)
+
+# while True:
+#     chosen_country = input("Please select the country name ").casefold()
+#     if chosen_country in countries:
+#         country_data = countries[chosen_country]
+#         print(f"The capital city is {country_data['capital']}")
+#     elif chosen_country == 'quit':
+#         break
 
 # while True:
 #     country_name_entered_by_user = input("Enter the country name = ")
