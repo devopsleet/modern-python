@@ -6,15 +6,21 @@ available_parts = {"1": "computer",
                    "6": "dvd drive"
                    }
 
+choice = None
+computer_parts = []
 
-current_choice = None
-while current_choice != "0":
-    if current_choice in available_parts:
-        chosen_part = available_parts[current_choice]
-        print(f"Adding {chosen_part}")
+while choice != '0':
+    if choice in available_parts:
+        chosen_part = available_parts[choice]
+        if chosen_part in computer_parts:
+            computer_parts.remove(chosen_part)
+        else:
+            computer_parts.append(chosen_part)
+            print(f"Your list now contains: {computer_parts}")
     else:
-        print("Here is the menu")
-        for key, value in available_parts.items():
-            print(f"{key}: {value}")
+        print("Printing the original dictionary")
+        for key, values in available_parts.items():
+            print(f"{key} : {values}")
+        print("0: to finish")
 
-    current_choice = input("> ")
+    choice = input("> ")
