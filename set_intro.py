@@ -1,20 +1,18 @@
-farm_animals = {'cow', 'sheep', 'hen', 'goat'}
-
+farm_animals = {'cow', 'hen', 'goat', 'sheep', 'horse'}
 print(farm_animals)
 
 
-for animals in farm_animals:
-    print(animals)
+for animal in farm_animals:
+    print(animal)
 
 
-print()
-print("Indexing a sequence")
-
-animals_list = ['cow', 'sheep', 'goat']
-goat = animals_list[2]
-print(goat)
+more_animals = {'sheep', 'goat', 'cow', 'horse', 'hen'}
 
 
-# animals_list = {'cow', 'sheep', 'goat'}
-# goat = farm_animals[3]
-# print(goat)
+if more_animals == farm_animals:
+    print('The sets are equal')
+else:
+    print('The sets ar different')
+
+
+print(set(range(0,20,2)))
