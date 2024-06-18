@@ -18,7 +18,7 @@ print()
 
 print('Gagan', 'Singla', 'is', 'a', 'good', 'boy')
 
-age = 24;
+age = 24
 
 print(age)
 
