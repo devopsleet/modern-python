@@ -9,3 +9,9 @@ print(a//b)
 print(a%b)
 
 print()
+
+
+for i in range(a//b):
+    print(i)
+
+print(a + b - 3)
