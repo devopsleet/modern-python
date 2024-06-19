@@ -1,4 +1,4 @@
-string1="he's"
+string1="he's   "
 
 string2 = "probably"
 
@@ -8,10 +8,11 @@ string4 = "for the"
 string5="fjords"
 
 print(string1, string2, string3, string4, string5)
+print("a ""b ""c ")
 
 print("Hello " * 5)
 
-print("Hello " * 4)
+print("Hello " * 4 + "2")
 
 
 print("Hello " * (5 + 4))
