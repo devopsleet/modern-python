@@ -18,3 +18,8 @@ Mar:{2}
 Apr:{1}
 May:{2}
 Jun:{1}""".format(28,30,31))
+
+
+print("""
+Jan:{0}
+""".format(1))
