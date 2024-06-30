@@ -1,26 +1,13 @@
 pangram = "The quick brown fox jumps over the lazy dog"
 
-letter = sorted(pangram)
+letters = sorted(pangram, key=str.casefold)
 
-print(letter)
+print(letters)
 
-# numbers = [2.3, 4.5, 7.8, 9.8, 1.6]
-#
-# sorted_numbers = sorted(numbers)
-#
-# print(sorted_numbers)
-# print(numbers)
+numbers = [2.3, 4.5, 6.7]
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
 
-
-missing_letter = sorted("The quick brown fox jumps over the lazy dog", key = str.casefold)
-print(missing_letter)
-
-names = ["Graham",
-         "John",
-         "terry",
-         "eric",
-         "Gagan"
-         ]
-
-names.sort(key= str.casefold)
+names = ["Graham", "John", "terry", "eric", "Terry", "michael"]
+names.sort(key=str.casefold)
 print(names)
