@@ -3,15 +3,22 @@ empty_list = []  # create ane empty list
 even = [2, 4, 6, 8, 10]
 odd = [1, 3, 5, 7, 9]
 
-numbers = even + odd
+# numbers = even + odd
+numbers = [even,odd]
 print(numbers)
 
-sorted_numbers = sorted(numbers)
-print(sorted_numbers)
-print(numbers)
+for number_list in numbers:
+    print(number_list)
 
-digits =
+    for value in number_list:
+        print(value)
+
+# sorted_numbers = sorted(numbers)
+# print(sorted_numbers)
+# print(numbers)
 #
+# digits =
+# #
 #
 # even.extend(odd)
 # print(even)

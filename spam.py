@@ -8,6 +8,16 @@ menu = [
     ["spam", "sausage", "spam", "bacon", "spam", "tomato", "spam"],
     ["spam", "egg", "spam", "spam", "bacon", "spam"],
 ]
+# for meal in menu:
+#     if "spam" not in meal:
+#         print(meal)
+
+
+for meal in menu:
+    for index in range(len(meal) - 1, -1, -1):
+        if meal[index] == "spam":
+            del meal[index]
+    print(", ".join(meal))
 
 # for meal in menu:
 #     if "spam" not in meal:
@@ -19,13 +29,13 @@ menu = [
 #         print("{0} has a spam score of {1}".format(meal, meal.count("spam")))
 
 
-for meal in menu:
-    for index in range(len(meal) - 1, -1, -1):
-        if meal[index] == "spam":
-            del meal[index]
-    print(", ".join(meal))
-
+# for meal in menu:
+#     for index in range(len(meal) - 1, -1, -1):
+#         if meal[index] == "spam":
+#             del meal[index]
+#     print(", ".join(meal))
 #
+# #
 # for meal in menu:
 #     for item in meal:
 #         if item != "spam":
