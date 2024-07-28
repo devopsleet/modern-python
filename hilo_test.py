@@ -30,8 +30,15 @@ def guess_binary(answer, low, high):
         #     print("Please enter h, l or c")
 
         guesses += 1
-
+correct_count = 0
+max_guesses = 0
 
 for number in range(LOW, HIGH + 1):
     number_of_guesses = guess_binary(number, LOW, HIGH)
     print("{} guessed in {}".format(number, number_of_guesses))
+
+    if number_of_guesses > max_guesses:
+        max_guesses, correct_count = number_of_guesses,1
+
+
+def my_name

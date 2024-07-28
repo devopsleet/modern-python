@@ -10,34 +10,27 @@ vehicles = {
     'roadster': 'Triumph Street Triple'
 }
 
-
+vehicles["starfighter"] = "lockhead F-104"
+vehicles["learjet"] = "bombardier"
+vehicles["toy"] = "glider"
 # my_car = vehicles['fiesta']
 # print(my_car)
 #
+# commuter = vehicles['virago']
+# print(commuter)
 #
-# computer = vehicles['virago']
-# print(computer)
-#
-#
-# learner = vehicles.get('ER5')
+# learner = vehicles.get("er5")
 # print(learner)
 
 
-vehicles["starfighter"] = "Lockheed F-104"
-vehicles["learjet"] = "bombardier Learjet 75"
-vehicles["toy"] = "glider"
-
-vehicles["virago"] = "Yamaha"
 # for key in vehicles:
-#     print(key, vehicles.get(key), sep=",")
+#     print(key, vehicles[key], sep= ";")
+
+
+# Upgrade the virago
+vehicles["virago"] = "Yamaha 350"
 
 del vehicles["starfighter"]
-#del vehicles["f1"]
-result = vehicles.pop("f1", None)
-print(result)
-plane = vehicles.pop("learjet")
-print(plane)
-bike = vehicles.pop("tenere", "nnnnn")
-print(bike)
+
 for key, value in vehicles.items():
     print(key, value, sep=", ")

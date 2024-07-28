@@ -1,3 +1,5 @@
+import colorama
+
 # Some ANSI escape sequences for colours and effects
 BLACK = '\u001b[30m'
 RED = '\u001b[31m'
@@ -22,10 +24,11 @@ def colour_print(text: str, *effects: str) -> None:
         defined at the start of this module
     """
     effect_string = "".join(effects)
+    print(effect_string)
     output_string = "{0}{1}{2}".format(effect_string, text, RESET)
     print(output_string)
 
-
+colorama.init()
 colour_print("Hello, Red", RED)
 colour_print("Hello, Red in bold", RED, BOLD, UNDERLINE, REVERSE)
 # test that the colour was reset
@@ -36,6 +39,6 @@ colour_print("Hello, Bold", BOLD)
 colour_print("Hello, Underline", UNDERLINE)
 colour_print("Hello, Reverse", REVERSE)
 colour_print("Hello, Black", BLACK)
-
+colorama.deinit()
 # print(RED, "this willbe RED")
 # print("and so is this")

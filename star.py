@@ -1,18 +1,15 @@
 numbers = (0,1,2,3,4,5)
 
-# print(numbers, sep= ";")
+# print(numbers, sep=";")
 #
-# print(*numbers, sep="-")
-# print(0,1,2,3,4,5, sep="--")
+# print(*numbers, sep=";")
+# print(0,1,2,3,4,5, sep="-")
 
 
-def test_star(*args):
+def test_scores(*args):
     print(args)
-    for x in args:
-        print(x)
+    print(*args)
 
 
-test_star(0,1,2,3,4,5)
-
-print()
-test_star()
+test_scores(0,1,2)
+test_scores()

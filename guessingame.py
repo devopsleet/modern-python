@@ -1,5 +1,19 @@
 answer = 5
 
+def get_integer(prompt):
+    """
+    Gets an integer from Standard Input(stdin).
+
+    The function will continue looping, and prompting
+    the user, until a valid `int` is entered.
+
+    :param prompt: The string that the user will see,
+        when they're prompted.
+    :return: The integer that the user enters.
+
+    """
+get_integer()
+
 print("Please guess the number between 1 and 10:")
 guess = int(input())
 
@@ -29,3 +43,6 @@ else:
 #         print("Well done, you guessed it")
 # else:
 #     print("You got it first time")
+
+
+def fibonacci
