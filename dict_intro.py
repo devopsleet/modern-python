@@ -31,6 +31,10 @@ vehicles["toy"] = "glider"
 vehicles["virago"] = "Yamaha 350"
 
 del vehicles["starfighter"]
-
+# del vehicles["f1"]
+result = vehicles.pop("f1", "The key does not exist")
+plane = vehicles.pop('learjet')
+print(plane)
+print(result)
 for key, value in vehicles.items():
     print(key, value, sep=", ")
