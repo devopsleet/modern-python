@@ -1,14 +1,13 @@
-class Circle:
-    def __init__(self):
-        self.a = 10
-        self.b = 20
-
-    def myfunc(self):
-        print(self.a, self.b)
+from typing import List
 
 
-circle = Circle()
-circle.myfunc()
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dic = {}
+        for i in range(len(nums)):
+            num = nums[i]
+            difference = target - num
+            if difference in dic:
+                return [i, dic[difference]]
 
-
-nums = [1,3,5,4]
+        dic[num] = i
