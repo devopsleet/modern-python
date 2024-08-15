@@ -1,13 +1,14 @@
-from typing import List
+from collections import defaultdict
+
+text = "hello world"
+char_count = defaultdict(int)
+
+print(char_count)
+
+for char in text:
+    char_count[char] += 1
+
+#print(char_count)
 
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dic = {}
-        for i in range(len(nums)):
-            num = nums[i]
-            difference = target - num
-            if difference in dic:
-                return [i, dic[difference]]
-
-        dic[num] = i
+build = "gagan"
