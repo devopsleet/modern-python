@@ -1,8 +1,8 @@
-iterable = [1,2,3,4]
-
-iterator = iter(iterable)
-
-print(next(iterator))
+class Dog:
+    legs: int = 4
+    ears: int = 2
 
 
-# sorted(iterable, key=, reverse=False)
+dog = Dog()
+print(dog.legs)
+print(dog.ears)

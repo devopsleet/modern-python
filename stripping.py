@@ -1,11 +1,17 @@
-filename = 'D:/Python/jabberwocky.txt'
-with open(filename) as poem:
-    first = poem.readline().rstrip()
-
-print(first)
-
-chars = "'Twas"
-no_apos = first.strip(chars)
-print(no_apos)
-
-twas_removed = first.removeprefix("'Twas")
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        current_string = "1"
+        for _ in range(n - 1):
+            next_string = ""
+            j = 0
+            k = 0
+            while j < len(current_string):
+                while (
+                    k < len(current_string)
+                    and current_string[k] == current_string[j]
+                ):
+                    k += 1
+                next_string += str(k - j) + current_string[j]
+                j = k
+            current_string = next_string
+        return current_string
