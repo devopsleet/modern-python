@@ -11,11 +11,14 @@ class Enemy:
     def get_type_of_enemy(self):
         return self.__type_of_enemy
 
-    def talk(self):
-        print(f'I am an enemy')
+    def talk(self) -> None:
+        return 'I am an enemy'
 
     def walk_forward(self):
         print(f"{self.type_of_enemy}")
 
     def attack(self):
         print(f'{self.attack_damage}')
+
+    def special_attack(self):
+        print('Enemy has no special attack')
