@@ -20,3 +20,5 @@ class Zombie(Enemy):
         if did_special_attack_work:
             self.health_points += 2
             print('Zombie regenerated two health points')
+
+        def special_func:
