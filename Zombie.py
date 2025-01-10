@@ -22,3 +22,4 @@ class Zombie(Enemy):
             print('Zombie regenerated two health points')
 
         def special_func:
+            test()
