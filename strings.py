@@ -1,35 +1,76 @@
-print("Today is a good day to learn python")
+# concatenate operator
 
-print('Python is fun')
+print('RCB ' + 'CSK')
+print("RCB" + "VS" + "CSK")
 
-print("Python's string easy to use")
 
-print('We can even include "quotes" in strings')
+print("Python" * 2)
+print("python" * 5)
 
-print("hello" + " world")
 
-greeting = "Hello"
-name = input("Please enter your name ")
+print("Python" * 0)
 
-# if we want a space, we can add that too
 
-print(greeting + ' ' + name)
-print()
+print("Python" * -1)
 
-print('Gagan', 'Singla', 'is', 'a', 'good', 'boy')
 
-age = 24
+print(5* "Python")
 
-print(age)
 
-print(type(greeting))
-print(type(age))
+# String Comparison Operator
+print("Venky" == "Venky")
 
-age_in_words = "2 Years"
-print(name + f" is  {age} years old")
-print(type(age))
 
-print(f"Pi is approx {22/7:12.50f}")
-pi = 22/7
+print("Venky" <= "Venky")
 
-print(f"Pi is approx {pi:12.50f}")
+print("Venky" != "venky")
+
+print("Venky" <= "venky")
+
+
+print("Gagan" >= "gagan")
+print("Gagan" >= "gagan")
+
+print(ord("g"))
+print(ord("G"))
+
+print("Venky" > "Venkateeeeeeeeeeeeeeeeeeeee")
+
+print(ord('a'))
+print(ord('y'))
+
+
+# Membership operator
+
+print("Ven" in "Venky")
+print("Ven" not in "Venky")
+
+
+# Escape sequence
+
+print("Today's Match:\"India vs Pakistan\"")
+print('Today\'s Match')
+
+print("Match 1: Afghanistan \nMatch 2: India")
+
+# \b acts as a backspace
+print("Venkatesh\b")
+print("Hello\b World!")
+print("Ga\bga\bn")
+
+
+# \ooo
+
+print('\141')
+print('\14123')
+
+print("\x65")
+
+
+# String formatting operator
+subject = "Python"
+print(f"{subject} class is happening today")
+print("%s class is happening today" %subject)
+
+name = "Gagan"
+print("I'm %s  and I live in %s" % (name, city))
