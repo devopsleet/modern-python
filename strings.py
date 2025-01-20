@@ -70,7 +70,30 @@ print("\x65")
 # String formatting operator
 subject = "Python"
 print(f"{subject} class is happening today")
-print("%s class is happening today" %subject)
+print("%s class is happening today" % subject)
 
 name = "Gagan"
+city = "Dallas"
 print("I'm %s  and I live in %s" % (name, city))
+
+score = 12.5
+print("Score is %f" % score)
+
+score = 12.1
+print("score is %d"%score)
+
+
+print("Gagan" + str(23))
+
+age = 23
+print("Gagan%s" % age)
+
+info = "I'm Venkatesh and I work as a Software Engineer"
+
+print(info[5:10])
+
+full_name = "Venkatesh Elangovan"
+print(full_name[5:9])
+print(full_name[10:])
+print(full_name[:10])
+print(full_name[:])
