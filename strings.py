@@ -93,7 +93,30 @@ info = "I'm Venkatesh and I work as a Software Engineer"
 print(info[5:10])
 
 full_name = "Venkatesh Elangovan"
-print(full_name[5:9])
+print(full_name[5:9:2])
 print(full_name[10:])
 print(full_name[:10])
 print(full_name[:])
+print(full_name[::2])
+print("New String")
+print(full_name[15:10:-1])
+
+print(full_name[5: 18: 202])
+print(full_name[::-1])
+
+
+v = "madam"
+v2 = "MadaM"
+print(v == v[::-1])
+
+print(v[::-1])
+print(v[::-1][::-1])
+
+
+print(full_name[11: -12: -1])
+
+
+name = "Venky"
+age = 26
+
+print("My name is %s and I am %d years old" %(name, age))
