@@ -117,6 +117,34 @@ print(full_name[11: -12: -1])
 
 
 name = "Venky"
-age = 26
+age =-2
+age = 27
 
 print("My name is %s and I am %d years old" %(name, age))
+
+print("My name is {name} name and I am {0} years old".format(39, name = "abc" ))
+
+
+# keyword arguments
+print("My name is {name} and I'm {age} years old".format(age = 26, name = "Gagan"))
+
+
+# integer arguments
+print("Class ends around {:d} AM".format(9))
+
+
+# float arguments
+print("Float value is given by {:f}".format(120.73263237237))
+print("Float round off to 2 digits {:.2f}".format(120.47474874))
+
+# padding of numbers
+print("Learning padding for decimal number {:08.3f}".format(10.3232332))
+
+# string padding
+print("{:#>20}".format("Venkatesh"))
+
+
+# Truncating the strings
+
+
+print("Binary Value {:b}, Oct Value: {o}, Hex Value: ")
