@@ -17,3 +17,13 @@ print(message.split())
 print("how are you doing today?".split(' ', 3))
 
 print(message.split(' ', maxsplit=2))
+
+gate_instructors = "RBR Jay Hari"
+print("-".join(gate_instructors))
+
+# join method only works for iterable of strings
+# t = [1,2,3,4,5]
+# print("#".join(t))
+
+
+print("#".join("Gagan"))
