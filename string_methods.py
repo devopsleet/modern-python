@@ -27,3 +27,26 @@ print("-".join(gate_instructors))
 
 
 print("#".join("Gagan"))
+
+
+print(dir(str))
+# replace
+
+
+# count
+
+statement = "Gagan"
+print(statement.count('a'))
+
+
+# find
+statement = "Python Course"
+print(statement.find("oh"))
+
+l = list()
+
+
+name = "Virat Kohli"
+l = list(name)
+
+print(l)
