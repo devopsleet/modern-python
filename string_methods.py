@@ -50,3 +50,32 @@ name = "Virat Kohli"
 l = list(name)
 
 print(l)
+
+l = ["sachin", "sehwag", "gauti", "virat", "yuvi", "dhoni"]
+
+print(len(l))
+
+l = [[1,2,3,[4,5]], [23,12,34], 30, 31]
+
+print(l[0][-1])
+
+
+print(l[::-1])
+
+
+n = "gagan"
+print(n[4:2])
+
+n = [1,2,3,4,5,6,7]
+print(n[6:2])
+
+
+# append
+
+csk = ["hayden", "Vijay", "Raina"]
+
+csk.append("Dhoni")
+
+csk.append(['a', 'b'])
+mem = csk.append(['c', 'd'])
+print(mem)
