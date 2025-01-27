@@ -109,3 +109,19 @@ s = {1,2,3}
 t = (4,5,6)
 s.union(t)
 print(s.union(t))
+
+
+s = {"Virat", "Dubey", "Rohit", "Dhoni"}
+
+
+# Union  ---->  |
+
+
+a = {1,2,3,4}
+b = {2,3,5,7}
+c = [10,20,30,40,3]
+
+print(a.intersection(b, c))
+print("Set Operations")
+result = a & b & c
+print(a & b & c)
