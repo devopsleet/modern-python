@@ -123,5 +123,56 @@ c = [10,20,30,40,3]
 
 print(a.intersection(b, c))
 print("Set Operations")
-result = a & b & c
-print(a & b & c)
+# result = a & b & c
+# print(a & b & c)
+
+
+# initialize a dictionary
+
+d = {}
+
+print(d)
+print(type(d))
+
+# just values so it's a set not a dictionary
+d = {1,2,3}
+print(type(d))
+print(d)
+
+d = {'A': 2,
+     'B': 23,
+     'C': 34
+     }
+print(d)
+
+d1 = dict()
+print(d1)
+
+d2 = dict([])
+print(d2)
+print(type(d2))
+
+# dictionary is ordered
+
+d = {"A": 1, "B": 2, "C": 3}
+print(d)
+
+# s = {1,1.5, "abc", 2}
+# print(s)
+
+print(hash(1))
+print(hash(1.0))
+print(hash(True))
+print(hash('1'))
+
+my_dict = {1: "A",
+           True: "B",
+           0: "C",
+           False: "D"
+           }
+print(my_dict)
+
+
+a = "Venky"
+d = {a: 12}
+print(d)
