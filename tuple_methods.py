@@ -216,4 +216,7 @@ print(d)
 
 students = ["venky", "abhi", "Gagan", "sai"]
 d = dict.fromkeys(students)
+other_iterable = [(1,2)]
+d.update(other_iterable)
 print(d)
+print(type(d))
