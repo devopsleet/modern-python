@@ -4,21 +4,17 @@ print(t)
 t = tuple()
 print(t)
 
-
 t = 1,
 print(type(t))
-
 
 t = (1,)
 print(t)
 print(type(t))
 
-
 t1 = "a", "b", "c"
 print(t1)
 t2 = ("a", "b", "c")
 print(t2)
-
 
 # a, b = (1,2)
 # i, j = a
@@ -34,7 +30,6 @@ print(s1)
 print(type(s1))
 print(s2)
 
-
 t = tuple("Python")
 print(t)
 
@@ -48,7 +43,6 @@ print(id(l1[0]))
 print(id(l1[2]))
 l2 = l1
 
-
 print(id(l1[0]))
 print(id(l2[0]))
 
@@ -57,69 +51,61 @@ l1[0] = 2312323223
 print(id(l1[0]))
 print(id(l2[0]))
 
-new_set = {1,2,3,4,6,4,5}
+new_set = {1, 2, 3, 4, 6, 4, 5}
 print(new_set)
 # print(sorted(new_set))
 print()
 
-s = ["venkyeeeeeeeeeeeeee","venky", "venkyaaaaaaaaaaa"]
+s = ["venkyeeeeeeeeeeeeee", "venky", "venkyaaaaaaaaaaa"]
 s.sort()
 print(s)
-
 
 l = ['9', '10']
 print(sorted(l))
 
-l = [9,10]
+l = [9, 10]
 print(sorted(l))
 
 print(ord('9'))
 print(ord('1'))
 
-
 print(set((0,)))
-
 
 # new_s = set("Gagan")
 # print(new_s)
 # print(new_s.reverse())
 
 
-l2 = list((1,2,3))
-print(l2)
+l2 = list((1, 2, 3))
+print({1,2,3})
 print(id(l2))
 l2[0] = 10
 print(id(l2))
 
-
-t3 = (1,2,[3,4])
+t3 = (1, 2, [3, 4])
 print(id(t3))
 t3[2][0] = 10
 print(t3)
 print(id(t3))
 
-
-s = {1,2,3}
-t = (4,5,6)
+s = {1, 2, 3}
+t = (4, 5, 6)
 s.update(t)
 print(s)
 
-
-s = {1,2,3}
-t = (4,5,6)
+s = {1, 2, 3}
+t = (4, 5, 6)
 s.union(t)
 print(s.union(t))
 
-
 s = {"Virat", "Dubey", "Rohit", "Dhoni"}
-
 
 # Union  ---->  |
 
 
-a = {1,2,3,4}
-b = {2,3,5,7}
-c = [10,20,30,40,3]
+a = {1, 2, 3, 4}
+b = {2, 3, 5, 7}
+c = [10, 20, 30, 40, 3]
 
 print(a.intersection(b, c))
 print("Set Operations")
@@ -135,7 +121,7 @@ print(d)
 print(type(d))
 
 # just values so it's a set not a dictionary
-d = {1,2,3}
+d = {1, 2, 3}
 print(type(d))
 print(d)
 
@@ -172,17 +158,15 @@ my_dict = {1: "A",
            }
 print(my_dict)
 
-
 a = "Venky"
 d = {a: 12}
 print(d)
 
-new_dict = dict(a = "value")
+new_dict = dict(a="value")
 print(new_dict)
 
 for key in new_dict:
-     print(type(key))
-
+    print(type(key))
 
 # copy a dictionary
 
@@ -191,32 +175,28 @@ d2 = d1
 print(id(d1))
 print(id(d2))
 
-
 d = {'a': 10, 'b': 20}
 d2 = dict(d)
 
-
-l = ['1', '2', '3']
-l2 = list(l)
-print(l)
+l1 = ['1', '2', '3']
+l2 = list(l1)
+print(l1)
 print(l2)
 
-s = {'a', 'b', 'c'}
-s2 = set(s)
+s1 = {'a', 'b', 'c'}
+s2 = set(s1)
 print(s)
 print(s2)
 
-d= dict(())
-
+d = dict(())
 
 virat = "ABC"
-d = dict([(virat , 120)])
+d = dict([(virat, 120)])
 print(d)
-
 
 students = ["venky", "abhi", "Gagan", "sai"]
 d = dict.fromkeys(students)
-other_iterable = [(1,2)]
+other_iterable = [(1, 2) ]
 d.update(other_iterable)
 print(d)
 print(type(d))

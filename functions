@@ -1,0 +1,4 @@
+f = 10
+if f % 2 == 0:
+    print("abc")
+    print(123)
