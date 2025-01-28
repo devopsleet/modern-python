@@ -176,3 +176,44 @@ print(my_dict)
 a = "Venky"
 d = {a: 12}
 print(d)
+
+new_dict = dict(a = "value")
+print(new_dict)
+
+for key in new_dict:
+     print(type(key))
+
+
+# copy a dictionary
+
+d1 = {'A': 12, 'B': 20, 'C': 30}
+d2 = d1
+print(id(d1))
+print(id(d2))
+
+
+d = {'a': 10, 'b': 20}
+d2 = dict(d)
+
+
+l = ['1', '2', '3']
+l2 = list(l)
+print(l)
+print(l2)
+
+s = {'a', 'b', 'c'}
+s2 = set(s)
+print(s)
+print(s2)
+
+d= dict(())
+
+
+virat = "ABC"
+d = dict([(virat , 120)])
+print(d)
+
+
+students = ["venky", "abhi", "Gagan", "sai"]
+d = dict.fromkeys(students)
+print(d)
