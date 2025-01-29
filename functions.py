@@ -63,3 +63,42 @@ lambda x: x ** 2
 a = lambda x: x **2
 print(type(a))
 print(a(12))
+
+# lambda functions can take any number of arguments
+
+lambda a,b: a + b
+
+sub = lambda *a: sum(a)
+print(sub(12,3))
+
+
+def f1():
+    return 10
+
+print(f1)
+print(type(f1))
+print(f1())
+
+
+f2 = lambda : 10
+
+print(f2)
+print(f2())
+
+
+# filter(function, iterable)
+
+scores = [12,34,56,67,89,100]
+def f3(x):
+    if x > 40:
+        return True
+    else:
+        return False
+
+
+filtered_list = filter(f3, scores)
+for val in filtered_list:
+    print(val)
+
+
+print(bool(0))
