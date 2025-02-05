@@ -18,3 +18,10 @@ class Account:
 
     def show_balance(self):
         print("Balance is {}".format(self.balance))
+
+
+if __name__ == "__main__":
+    gagan = Account("Gagan", 0)
+    gagan.show_balance()
+
+gs
