@@ -22,16 +22,30 @@ from typing import List
 
 # Check if the Sentence is Pangram or not
 
-sentence = "leetcode"
+# sentence = "leetcode"
+#
+# def isPangram(s):
+#     for i in range(26):
+#         curr_char = chr((ord('a') + i))
+#         print(curr_char)
+#
+#         if sentence.find(curr_char) == -1:
+#             return False
+#
+#
+# output = isPangram(sentence)
+# print(output)
 
-def isPangram(s):
-    for i in range(26):
-        curr_char = chr((ord('a') + i))
-        print(curr_char)
-
-        if sentence.find(curr_char) == -1:
-            return False
+arr = [1,1,3,3,5,5,7,7,2,8]
 
 
-output = isPangram(sentence)
+def countElements(nums):
+    count = 0
+    for num in nums:
+        if num + 1 in nums:
+            count = count + 1
+    return count
+
+
+output = countElements(arr)
 print(output)
