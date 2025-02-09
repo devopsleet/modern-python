@@ -1,5 +1,5 @@
 from typing import List
-
+from collections import defaultdict
 # Two Sum
 # def twoSum(nums: List[int], target: int) -> List[int]:
 #     hashmap = {}
@@ -36,16 +36,27 @@ from typing import List
 # output = isPangram(sentence)
 # print(output)
 
-arr = [1,1,3,3,5,5,7,7,2,8]
+# arr = [1,1,3,3,5,5,7,7,2,8]
 
 
-def countElements(nums):
-    count = 0
-    for num in nums:
-        if num + 1 in nums:
-            count = count + 1
-    return count
+# def countElements(nums):
+#     count = 0
+#     for num in nums:
+#         if num + 1 in nums:
+#             count = count + 1
+#     return count
+#
+#
+# output = countElements(arr)
+# print(output)
 
 
-output = countElements(arr)
-print(output)
+arr = [1,3]
+
+losers = defaultdict(int)
+
+for num in arr:
+    losers[num] = losers[num]
+
+print(1 in losers)
+print(losers)
