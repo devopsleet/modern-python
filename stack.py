@@ -1,20 +1,42 @@
 # stack implementation in Python
-stack = [1, 2, 3, 4, 5]
-stack.append(6)
+# stack = [1, 2, 3, 4, 5]
+# stack.append(6)
+#
+# print(stack)
+#
+# # popping elements
+# stack.pop()
+# stack.pop(-2)
+#
+# print(stack)
+#
+# # check if stack is empty or not
+# print(not stack)  # False
+#
+# # check the element at top
+# print(stack[-1])
+#
+# # Get size
+# print(len(stack))
 
-print(stack)
+def isValid(s:str):
+    stack = []
+    mapper = {'(': ')', '[': ']', '{': '}'}
 
-# popping elements
-stack.pop()
-stack.pop(-2)
+    for c in s:
+        if c in mapper:
+            stack.append(c)
 
-print(stack)
+        else:
+            if not stack:
+                return False
 
-# check if stack is empty or not
-print(not stack)  # False
+            top = stack.pop()
+            if mapper[top] !=c:
+                return False
 
-# check the element at top
-print(stack[-1])
+    return not stack
 
-# Get size
-print(len(stack))
+
+result = isValid("({}")
+print(result)
