@@ -51,12 +51,19 @@ from collections import defaultdict
 # print(output)
 
 
-arr = [1,3]
+# arr = [1,3]
+#
+# losers = defaultdict(int)
+#
+# for num in arr:
+#     losers[num] = losers[num]
+#
+# print(1 in losers)
+# print(losers)
 
-losers = defaultdict(int)
 
-for num in arr:
-    losers[num] = losers[num]
+dict = {1: "abc", 2 : "def"}
 
-print(1 in losers)
-print(losers)
+print(list(dict.values()))
+print(dict.keys())
+print(dict.items())

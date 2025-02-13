@@ -11,29 +11,48 @@ def my_range(n: int):
 
 
 big_range = my_range(5)
+print(big_range)
 
-print("big_range is {} bytes".format(sys.getsizeof(big_range)))
-
-# create a list containing all the values in big range
-big_list = []
-#_ = input("line 19")
 for val in big_range:
-    _ = input("line 21 inside loop")
-    big_list.append(val)
+    print(val)
+
+for newVal in big_range:
+    print(newVal)
 
 
-print("big_list is {} bytes".format(sys.getsizeof(big_list)))
-print(f"big_range {big_range}")
-print(f"big list {big_list}")
+# print("big_range is {} bytes".format(sys.getsizeof(big_range)))
+#
+# # create a list containing all the values in big range
+# big_list = []
+# #_ = input("line 19")
+# print(big_range)
+#print(next(big_range))
+# print("After next()")
+# for val in big_range:
+#     print(val)
+#
+# for newVal in big_range:
+#     print(newVal)
+#     #_ = input("line 21 inside loop")
+#     big_list.append(val)
 
 
-nums = [1, 2, 3, 4]
-print(type(nums))
-iterable = iter(nums)
-
-print(type(iterable))
-print(next(iterable))
+# print("big_list is {} bytes".format(sys.getsizeof(big_list)))
+# print(f"big_range {big_range}")
+# print(f"big list {big_list}")
 
 
-for num in iter(nums):
-    print(num)
+# nums = [1, 2, 3, 4]
+# print(type(nums))
+# iterable = iter(nums)
+#
+# print(type(iterable))
+# print(next(iterable))
+#
+#
+# for num in iter(nums):
+#     print(num)
+#
+# nums = [1,2,3]
+#
+# print(next(nums))
