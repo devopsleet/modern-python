@@ -1,58 +1,15 @@
 import sys
 
+big_range = range(1000)
 
-def my_range(n: int):
-    print("my_range starts now")
-    start = 0
-    while start < n:
-        print(f"my_range is returning {start}")
-        yield start
-        start += 1
+print("big range is {} bytes".format(sys.getsizeof(big_range)))
 
 
-big_range = my_range(5)
-print(big_range)
+# create a list containing all the values
+
+big_list = []
 
 for val in big_range:
-    print(val)
+    big_list.append(val)
 
-for newVal in big_range:
-    print(newVal)
-
-
-# print("big_range is {} bytes".format(sys.getsizeof(big_range)))
-#
-# # create a list containing all the values in big range
-# big_list = []
-# #_ = input("line 19")
-# print(big_range)
-#print(next(big_range))
-# print("After next()")
-# for val in big_range:
-#     print(val)
-#
-# for newVal in big_range:
-#     print(newVal)
-#     #_ = input("line 21 inside loop")
-#     big_list.append(val)
-
-
-# print("big_list is {} bytes".format(sys.getsizeof(big_list)))
-# print(f"big_range {big_range}")
-# print(f"big list {big_list}")
-
-
-# nums = [1, 2, 3, 4]
-# print(type(nums))
-# iterable = iter(nums)
-#
-# print(type(iterable))
-# print(next(iterable))
-#
-#
-# for num in iter(nums):
-#     print(num)
-#
-# nums = [1,2,3]
-#
-# print(next(nums))
+print("big_list is {} bytes".format(sys.getsizeof(big_list)))
