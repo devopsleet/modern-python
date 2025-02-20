@@ -29,6 +29,7 @@ hamilton.switch_on()
 print(hamilton.on)
 
 Kettle.switch_on(kenwood)
+print(kenwood.on)
 
 
 print("*" * 80)
@@ -41,3 +42,14 @@ print(kenwood.power)
 print(Kettle.power_source)
 print(kenwood.power_source)
 print(hamilton.power_source)
+print(Kettle.__dict__)
+print(kenwood.__dict__)
+
+Kettle.power_source = "atomic"
+print(kenwood.power_source)
+print(hamilton.power_source)
+
+a = 10
+b = 100
+
+print(a.__add__(b))

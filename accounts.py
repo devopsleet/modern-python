@@ -23,5 +23,7 @@ class Account:
 if __name__ == "__main__":
     gagan = Account("Gagan", 0)
     gagan.show_balance()
-
-gs
+    gagan.deposit(1000)
+    gagan.show_balance()
+    gagan.withdraw(500)
+    gagan.show_balance()
