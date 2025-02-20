@@ -25,7 +25,7 @@ class Account:
         if amount > 0:
             self.balance -= amount
         self.show_balance()
-        self.transaction_list.append((Account._current_time(), -amount))
+        self.transaction_list.append((self._current_time(), -amount))
 
     def show_balance(self):
         print("Balance is {}".format(self.balance))
