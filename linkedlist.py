@@ -15,6 +15,7 @@ class ListNode:
     @staticmethod
     def display():
         ptr = head
+        print("*************DLL Forward direction *************")
         while ptr:
             if ptr.next:
                 print(ptr.val, end="->")
@@ -25,7 +26,18 @@ class ListNode:
             # ptr = ptr.next
             # if ptr == tail:
             #     print(ptr.val)
-            #     ptr = ptr.next
+            #     ptr = ptr.next`
+
+    @staticmethod
+    def display_backwards():
+        ptr = tail
+        print("*************DLL Backward direction *************")
+        while ptr:
+            if ptr.prev:
+                print(ptr.val, end="<-")
+            else:
+                print(ptr.val)
+            ptr = ptr.prev
 
 
 head = ListNode('head')
@@ -41,3 +53,4 @@ ListNode.add_to_start(three)
 ListNode.add_to_start(two)
 ListNode.add_to_start(one)
 ListNode.display()
+ListNode.display_backwards()
