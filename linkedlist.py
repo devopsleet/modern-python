@@ -13,25 +13,27 @@ class ListNode:
         head.next = node_to_add
 
     @staticmethod
+    def add_to_end(node_to_add):
+        node_to_add.next = tail
+        node_to_add.prev = tail.prev
+        tail.prev.next = node_to_add
+        tail.prev = node_to_add
+
+    @staticmethod
     def display():
         ptr = head
-        print("*************DLL Forward direction *************")
+        print("************* Displaying DLL in Forward direction **************")
         while ptr:
             if ptr.next:
                 print(ptr.val, end="->")
             else:
                 print(ptr.val)
             ptr = ptr.next
-            # print(ptr.val, end="->")
-            # ptr = ptr.next
-            # if ptr == tail:
-            #     print(ptr.val)
-            #     ptr = ptr.next`
 
     @staticmethod
     def display_backwards():
         ptr = tail
-        print("*************DLL Backward direction *************")
+        print("************* Displaying DLL in Backward direction *************")
         while ptr:
             if ptr.prev:
                 print(ptr.val, end="<-")
@@ -45,12 +47,19 @@ tail = ListNode('tail')
 head.next = tail
 tail.prev = head
 
-one = ListNode(20)
-two = ListNode(30)
-three = ListNode(40)
+first = ListNode(10)
+second = ListNode(20)
+third = ListNode(30)
+fourth = ListNode(40)
+fifth = ListNode(50)
+sixth = ListNode(60)
 
-ListNode.add_to_start(three)
-ListNode.add_to_start(two)
-ListNode.add_to_start(one)
+ListNode.add_to_start(fifth)
+ListNode.add_to_start(fourth)
+ListNode.add_to_start(third)
+ListNode.add_to_start(second)
+ListNode.add_to_start(first)
+ListNode.add_to_end(sixth)
+
 ListNode.display()
 ListNode.display_backwards()
