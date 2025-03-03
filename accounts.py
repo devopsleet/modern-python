@@ -54,6 +54,6 @@ if __name__ == "__main__":
     steph = Account("Steph", 800)
     steph.__balance = 200
     steph.show_balance()
-    print(steph.__dict__)
-    print(steph.__balance)
-    print(steph._Account__balance)
+    # print(steph.__dict__)
+    # print(steph.__balance)
+    # print(steph._Account__balance)
