@@ -1,81 +1,45 @@
-# string methods
+# capitalize
+# returns a new string
+# first character is capital and all other characters in lowercase
+# original string remains unchanged
 
-# strip
+s = "hello WORLD"
+res = s.capitalize()
+print(res)
 
-name = "   Rohit sharma   "
+# if first character is a number
+s = "123hello WORLD"
+res = s.capitalize()
+print(res) # does not alter it because it only affects alphabetical characters
 
-print(name.strip())
+###############################
+# casefold
+# used to convert string to lowercase
+# similar to lower() but is more aggressive in converting Unicode characters also
 
-new_name = ".a..Rohit Sharma..b."
+string1 = "straße"
+string2 = "strasse"
 
-print(new_name.strip('.aRmb'))
-
-
-message = "All the best for your GATE 2025 Exam"
-print(message.split())
-
-print("how are you doing today?".split(' ', 3))
-
-print(message.split(' ', maxsplit=2))
-
-gate_instructors = "RBR Jay Hari"
-print("-".join(gate_instructors))
-
-# join method only works for iterable of strings
-# t = [1,2,3,4,5]
-# print("#".join(t))
-
-
-print("#".join("Gagan"))
+print(string1.lower() == string2.lower())
+print(string1.lower())
+print(string1.casefold() == string2.casefold())
 
 
-print(dir(str))
-# replace
+################################
+# center
+# center align strings
+# center(length[, fillchar])
+# fillchar is optional. If not provided, space is taken as default
 
+a = "hello"
+b = a.center(20, '-')
+print(b)
 
+##############################
 # count
+# returns the number of times a specified substring appears in a string
+# count(substring, start = 0, end(len(s))
 
-statement = "Gagan"
-print(statement.count('a'))
-
-
-# find
-statement = "Python Course"
-print(statement.find("oh"))
-
-l = list()
-
-
-name = "Virat Kohli"
-l = list(name)
-
-print(l)
-
-l = ["sachin", "sehwag", "gauti", "virat", "yuvi", "dhoni"]
-
-print(len(l))
-
-l = [[1,2,3,[4,5]], [23,12,34], 30, 31]
-
-print(l[0][-1])
-
-
-print(l[::-1])
-
-
-n = "gagan"
-print(n[4:2])
-
-n = [1,2,3,4,5,6,7]
-print(n[6:2])
-
-
-# append
-
-csk = ["hayden", "Vijay", "Raina"]
-
-csk.append("Dhoni")
-
-csk.append(['a', 'b'])
-mem = csk.append(['c', 'd'])
-print(mem)
+s = "hello world"
+res = s.count("l")
+print(res)
