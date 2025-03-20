@@ -49,7 +49,7 @@ print(Decimal(0.1))
 print(10+.2)
 
 
-a = complex(12,2)
+a = complex(12,3)
 print(a)
 print(type(a))
 
