@@ -1,69 +1,35 @@
-from typing import List
-from collections import defaultdict
-# Two Sum
-# def twoSum(nums: List[int], target: int) -> List[int]:
-#     hashmap = {}
-#     for i in range(len(nums)):
-#         num = nums[i]
-#         diff = target - num
-#         #print(diff)
-#         if diff in hashmap:
-#             return [i, hashmap[diff]]
-#
-#         hashmap[num] = i
-#     #print(hashmap)
-#     return [-1, -1]
-#
-#
-# nums = [2, 7, 11, 15]
-# target = 9
-# output = twoSum(nums, target)
-# print(output)
+# Declaration: a hash map is declared like any other variable. The syntax is {}
+hash_map = {}
 
-# Check if the Sentence is Pangram or not
+# If you want to initialize it with some key value pairs, use the following syntax:
+hash_map = {1: 2, 5: 3, 7: 2}
 
-# sentence = "leetcode"
-#
-# def isPangram(s):
-#     for i in range(26):
-#         curr_char = chr((ord('a') + i))
-#         print(curr_char)
-#
-#         if sentence.find(curr_char) == -1:
-#             return False
-#
-#
-# output = isPangram(sentence)
-# print(output)
+# Checking if a key exists: simply use the `in` keyword
+1 in hash_map # True
+9 in hash_map # False
 
-# arr = [1,1,3,3,5,5,7,7,2,8]
+# Accessing a value given a key: use square brackets, similar to an array.
+hash_map[5] # 3
 
+# Adding or updating a key: use square brackets, similar to an array.
+# If the key already exists, the value will be updated
+hash_map[5] = 6
 
-# def countElements(nums):
-#     count = 0
-#     for num in nums:
-#         if num + 1 in nums:
-#             count = count + 1
-#     return count
-#
-#
-# output = countElements(arr)
-# print(output)
+# If the key doesn't exist yet, the key value pair will be inserted
+hash_map[9] = 15
 
+# Deleting a key: use the del keyword. Key must exist or you will get an error.
+del hash_map[9]
 
-# arr = [1,3]
-#
-# losers = defaultdict(int)
-#
-# for num in arr:
-#     losers[num] = losers[num]
-#
-# print(1 in losers)
-# print(losers)
+# Get size
+len(hash_map) # 3
 
+# Get keys: use .keys(). You can iterate over this using a for loop.
+keys = hash_map.keys()
+for key in keys:
+    print(key)
 
-dict = {1: "abc", 2 : "def"}
-
-print(list(dict.values()))
-print(dict.keys())
-print(dict.items())
+# Get values: use .values(). You can iterate over this using a for loop.
+values = hash_map.values()
+for val in values:
+    print(val)
