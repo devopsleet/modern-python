@@ -33,6 +33,8 @@ class Solution:
             curr = 0
             for i in range(mid + 1, right + 1):
                 curr += nums[i]
+                curr = curr[n + 1]
+
                 best_right_sum = max(best_right_sum, curr)
 
             # The best_combined_sum uses the middle element and
