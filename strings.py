@@ -1,4 +1,4 @@
-print("Today is a good day to learn Python");
+print("Today is a good day to learn Python")
 print('Python is fun')
 print("We can even include 'quotes'")
 greeting = "Hello"
@@ -14,6 +14,7 @@ print(age)
 print(type(greeting))
 print(type(age))
 
-age = "2 years"
-print(age)
+# age = "2 years"
+print(name + " is " + str(age) + " years old")
 print(type(age))
+print(2.4)
