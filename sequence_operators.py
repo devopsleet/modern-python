@@ -24,3 +24,15 @@ print("abc" "def")
 print(var2 + "def")
 
 print("Gagan ""Singla"" is " + " an IT Engineer")
+
+
+print("Hello" * 5)
+
+print("Hello " * 5 + "4")
+
+
+today = "friday"
+print("day" in today)
+print("fri" in today)
+print("thur" in today)
+print("parrot" in "fjord")
