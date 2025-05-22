@@ -1,23 +1,26 @@
-string1="he's   "
+string1 = "he's "
 
-string2 = "probably"
+string2 = "probably "
 
-string3 = "pining"
+string3 = "pining "
 
-string4 = "for the"
-string5="fjords"
+string4 = "for the "
 
-print(string1, string2, string3, string4, string5)
-print("a ""b ""c ")
+string5 = "fjords"
 
-print("Hello " * 5)
-
-print("Hello " * 4 + "2")
+print(string1 + string2 + string3 + string4 + string5)
 
 
-print("Hello " * (5 + 4))
+var1 = 123
+var2 = "abc"
 
-today="friday"
-print("day" in today)
-print("fri" in today)
-print("parrot" in today)
+var3 = 345
+
+print(var1, var2)
+# print(var1 + var2)
+print(var1, var3)
+
+print("abc" "def")
+print(var2 + "def")
+
+print("Gagan ""Singla"" is " + " an IT Engineer")
