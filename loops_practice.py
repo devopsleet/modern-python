@@ -1,5 +1,4 @@
-# Loops
-
+print(ord('a'))
 
 print(chr(97))
 
@@ -7,17 +6,14 @@ a = 10
 b = 12
 c = 5
 
-# multivaribale assignment in a single line
-a,b,c = 10,12,[1,2,3]
+a,b,c = 10,12.5,5
 
-print(a)
-print(b)
-print(c)
+
+print(type(a))
+print(type(b))
 print(type(c))
 
+print(2)
+print("2")
 
-scores = [12,14,16,17,18]
-
-for index, value in enumerate(scores):
-    print(index)
-    print(value)
+x,y,z = 10,5,2
