@@ -1,54 +1,22 @@
-print("abc");
+range_val = range(5)
 
-print("xyz");
+print(range_val)
+print(type(range_val))
+print(id(range))
 
+print(list(range_val))
 
-print("abc"); print("venky")
+print("New Range")
+range_val2 = range(10,15)
+print(range(10,15))
 
-
-# Indentation
-
-welcome_message = "Welcome to Python Class"
-print(welcome_message)
-
-
-_abc = 9
-
-print(_abc)
-
-_ = 100
-
-print(_)
-
-import keyword
-print(keyword.kwlist)
-
-# declare a name of the person
-
-person_name = "Gagan"
-s_n = "Singla"
-
-print(len(person_name))
-
-"""
-I'm explaining multiple line comment here'in Python Class
-
-"""
-
-new_string = "This is a string"
-new_string_2 = 'This is a string'
-new_string_3 = 'This is a string'
-
-print(type(new_string))
-print(type(new_string_2))
+print(list(range(10,15,2)))
 
 
-print(id(new_string))
-print(id(new_string_2))
-print(id(new_string_3))
+print(list(range(-5)))
 
 
-a = 10
-b = 10
+print(list(range(-5, 0)))
 
-print()
+
+print(list(range(0,-5,-1)))
