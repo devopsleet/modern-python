@@ -34,3 +34,13 @@ c = int(c)
 print( 2 ** 5)
 print(-7 // 2)
 print(4 % 2.2)
+
+
+print(2**5)
+
+
+# comparison
+print(8%5)
+print(3 % 4)
+print(4%7)
+print(2 % 4)
