@@ -44,3 +44,19 @@ print(8%5)
 print(3 % 4)
 print(4%7)
 print(2 % 4)
+
+f= 14
+
+print(f % 5)
+
+
+# bitwsie operators
+
+print(12 ^ 12)
+print(bin(14))
+
+print(14 | 21)
+
+print(14 ^ 21)
+
+print(~-14)
