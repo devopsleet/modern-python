@@ -286,3 +286,58 @@ print(str9.ljust(5, '-'))
 str10 = "world"
 
 print(str10.rjust(7, "1"))
+
+
+# Search & Replace methods.
+
+# 1. find(sub, [start, [end]])
+
+str10 = "banana"
+print(str10.find("a"))
+print(str10.find("a", 2,5))
+
+print(str10.find("", len(str10) + 1))
+
+
+# 2. rfind()
+
+print(str10.rfind("a"))
+
+#3. index(sub, [, start[, end]])
+
+str11 = "abcd"
+
+print(str11.index('bc'))
+
+
+# 4. replace(old, new[, count])
+
+str12 = "gagansingla"
+
+print(str12.replace("a", "-",1))
+
+# 5. count(sub[, start[, end]])
+
+str13 = "aaaaaa"
+print(str13.count(a))
+print(str13.count("a"))
+
+# 6. startswith(prefix[, start[, end]])
+
+str14 = "hello"
+str15 = "hike"
+
+print(str14.startswith('he'))
+print(str15.startswith(('he', 'hi')))
+
+
+# 7. endswith(prefix[, start[, end]])
+
+str15 = "world"
+print(str15.endswith(("ld", "le")))
+
+
+url = "https://example.com"
+
+if url.startswith(("https://", "ftp://")):
+    print("Okay")
