@@ -162,15 +162,127 @@ print('\x65')
 subject = "Python"
 print("%s class is happening today"%subject)
 
-print("I'm Gagan and my age is 31")
+# print("I'm Gagan and my age is 31")
 
 name = "Gagan"
 age = 31
-
 print("I'm %s and my age is %d"   %(name, age))
 
 print(f"I'm {name} and my age is {age}")
 
-print("I'm {0} and my age is {}".format(name, age))
+print("I'm {0} and my age is {1}".format(name, age))
 
-print()
+dict = {"name": "Gagan",
+        "age": 31}
+print("I'm {name} and my age is {age}".format(**dict))
+
+name = "Gagan"
+city = "Dallas"
+
+print("%s %s"%(city, name))
+
+score = 12.787
+
+print("Score is %s" %score)
+
+info = "I'm Venkatesh"
+
+info[5:10]
+print(info[5:])
+print(info[:])
+print(info[::])
+
+# string methods
+
+str = "Hello World"
+str2 = "HELLO WORLD"
+
+# Case conversion methods
+
+# 1. lower()
+print(str.lower())
+print(str2.lower())
+
+# 2. upper()
+print(str.upper())
+print(str.upper())
+
+# 3. capitalize()
+print(str.capitalize())
+print(str2.capitalize())
+
+# 4. title()
+print(str.title())
+print(str2.title())
+
+# 5. swapcase()
+print(str.swapcase())
+print(str2.swapcase())
+
+# Whitespace and padding methods`
+
+# 1. strip()
+
+str = "hello" \
+      "" \
+      "world"
+
+str2 = """ 
+
+Hello 
+
+World
+
+"""
+
+str3 = "\n\thello   \n\t World"
+print(str)
+print(str.strip())
+print(str2)
+print(str2.strip())
+print(str3)
+print(str3.strip())
+
+str4 = "----hello--- world---------"
+print(str4.strip('-'))
+
+
+# 2. lstrip()
+
+str5 = "        $$$$$$$$$$-----------hello"
+print(str5.lstrip())
+print(str5.lstrip('$'))
+
+
+# 3. rstrip()
+
+str6 = "World$$$$$$$$$$$$$$$$$$$$$$$$$$      "
+print(str6.rstrip())
+print(str6.rstrip('$'))
+
+# 4. zfill()
+
+str6 = "42"
+str7 = "+43"
+
+print(str6.zfill(2))
+print(str7.zfill(4))
+
+# 5. str.center(width, fillchar = ' ')
+
+str8  = "hi"
+print(str8.center(8, "-"))
+
+
+# 6.ljust(width, fillchar= ' ')
+
+str9 = "hi"
+
+print(str9.ljust(5, '-'))
+
+
+# 7 rjust(width, fillchar= " ")
+
+str10 = "world"
+
+print(str10.rjust(7, "1"))
