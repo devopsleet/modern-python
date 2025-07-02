@@ -108,4 +108,69 @@ for a,b,c in zip(l1,l2,l3):
     print(a,b,c)
 
 
-# While loop
+# concatenate operators
+
+print('RCB' + 'CSK')
+
+
+# string repetition operator
+
+print("Python " * 2)
+print("Python" * 0)
+
+
+# string comparison operator
+print("Venky" == "Venky")
+print("Venky" != "venky")
+
+print("Venky" > "venky")
+
+
+# membership operator
+
+print("Ven" in "Venky")
+
+
+# Escape sequence
+print("Today's match is \"India vs Pakistan\"")
+
+
+# \n - new line
+print("Match 1\nMatch2\n")
+
+print("Hello World! \b")
+print("Hello\b")
+print("Hello \b World")
+
+print("Venkat\besh\b")
+
+
+# \ooo
+
+print('\141')
+
+print('\141\142')
+print('\1412')
+
+
+# xhh
+print('\x65')
+
+#print('\x')
+
+# string formatting operator
+subject = "Python"
+print("%s class is happening today"%subject)
+
+print("I'm Gagan and my age is 31")
+
+name = "Gagan"
+age = 31
+
+print("I'm %s and my age is %d"   %(name, age))
+
+print(f"I'm {name} and my age is {age}")
+
+print("I'm {0} and my age is {}".format(name, age))
+
+print()
