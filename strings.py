@@ -341,3 +341,34 @@ url = "https://example.com"
 
 if url.startswith(("https://", "ftp://")):
     print("Okay")
+
+
+
+name = "Gagan"
+print(name[::-2])
+print(name[::-1][::-1])
+
+v = "MadaM"
+print(v == v[::-1])
+
+# formatting the strings
+nme = "Venky"
+#age = 26
+print("My name is %s and I'm %d years old"%(name, age))
+#print("{} : {0}".format(name, age))
+
+#print("Class ends around {:d}".format(9.30))
+
+# Strip
+
+name = "Rohit Sharma"
+
+print(name.strip())
+
+
+fruit = "banana"
+
+print(fruit.find('na'))
+print(fruit.find('o'))
+print(fruit.find(''))
+print(fruit.index('o'))
