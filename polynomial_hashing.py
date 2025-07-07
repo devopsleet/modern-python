@@ -19,3 +19,16 @@ def hashing(s):
 
 result = hashing(string)
 print(result)
+
+
+def count_unique_substrings(s):
+
+    ans = set()
+    n = len(s)
+
+    last_hash = 0
+    for i in range(n):
+        for j in range(i,n):
+            last_hash = last_hash + ()
+
+    return ans.size()
