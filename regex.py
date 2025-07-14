@@ -18,3 +18,9 @@ print(re.findall(r"a.b", "a_b a|b a+bc a b"))
 print(re.findall(r"a.b", "a_b a1b a b"))
 
 print(re.findall(r'\W+', 'hello world_123!'))
+
+text = "cat_$$cattuuu"
+print(re.findall(r"\bcat", text))
+
+text = "Hello\tWorld\nNice day"
+print(re.findall(r'\s', text))
