@@ -23,4 +23,4 @@ text = "cat_$$cattuuu"
 print(re.findall(r"\bcat", text))
 
 text = "Hello\tWorld\nNice day"
-print(re.findall(r'\s', text))
+print(re.findall(r'\S', text))
