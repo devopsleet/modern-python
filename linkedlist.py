@@ -42,6 +42,9 @@ def remove_from_start():
     node_to_remove = head.next
     node_to_remove.next.prev = head
     head.next = node_to_remove.next
+    head.next.next =- head.next
+
+
 
 
 #remove_from_start()
