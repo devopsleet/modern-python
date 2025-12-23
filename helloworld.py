@@ -1,133 +1,67 @@
-range_val = range(5)
+print('Hello, world!')
+print(1 + 2)
+print(7*6)
 
-print(range_val)
-print(type(range_val))
-print(id(range))
+print()
 
-print(list(range_val))
-
-print("New Range")
-range_val2 = range(10,15)
-print(range(10,15))
-
-print(list(range(10,15,2)))
+print("The end", "or is it", " keep watching", 2)
 
 
-print(list(range(-5)))
+print("Gagan""Singla" "my" "name" , sep= "-")
+
+print("Today is a good day to learn Python")
+print('Python is fun')
+print('We can include "Python" in strings')
+print("Hello " + "World")
+
+greeting = "Hello"
+name = "Bruce"
+
+print(name + greeting)
+
+#
+# name = input("Enter your name ")
+# print(name)
 
 
-print(list(range(-5, 0)))
+splitString = "This string has been split\n over several\n lines"
+print(splitString)
+
+tabbedString = "1\t2\t3\t4"
+print(tabbedString)
 
 
-print(list(range(0,-5,-1)))
+print('The pet shop owner said "No, no, \'e,\'s resting".')
 
 
-#set_3 = set(1,2,3)
+print("""The prt owner said "No, no 'e's uh he 's resting". """)
 
-print("")
-#print(set_3)
+anotherString = """This string has been
+split
+over
+several lines"""
 
-set_1 = {1,2,3,4,5}
-set_2 = set((1,2,3,4,5))
-print(set_2)
+print(anotherString)
 
-
-set_3 = {1,1.0, True,2.0,2,3,4,5,6}
-print(set_3)
-
-
-set_3.add("Virat")
-print(set_3)
-
-a = False
-print(type(a))
+print("""This string has been split \
+over several lines""")
 
 
-print(False == 0)
-print(True == 2)
+#print("C:\Users\tim\notest.txt")
+print("C:\\Users\\tim\\notest.txt")
+print(r"C:\Users\tim\notest.txt")
 
-set_5 = {"Virat", "123", 1, "1", True, False, 0}
-print(set_5)
-
-
-print(1.0 == 1 == True)
-
-set_a = {'A', 'B'}
-
-l = ['a', 'b', 'VIRAT']
-l[2] = 'KOHLI'
-print(l)
-
-set_6 = {'KOHLI'}
-set_6.remove('KOHLI')
-print(set_6)
+age = 24
+print(age)
 
 
-set_b = {"1", "2", 1,2}
+print(type(greeting))
 
-print(id(set_b))
-#print(hash(set_b))
+print(type(age))
 
-#set_b.add(['a', 'b'])
-
-l.append({'a'})
-
-print(l)
+age = 24
+print(type(age))
 
 
-print(hash(1))
-print(hash(1.0))
-
-print(hash(2))
-print(hash(2.0))
-print(hash('2'))
-
-
-set_c = {1,2,3,('A', 'B')}
-print(set_c)
-
-
-set_d = {1,2,'w', 'd'}
-print(set_d)
-
-set_1 = set(('1',1))
-print(set_1)
-print(type(set_1))
-
-f_set_1 = frozenset({'1', 1})
-print(f_set_1)
-print(type(f_set_1))
-
-rcb_batter_scores = {"Virat": 55,
-                     "faf": 20,
-                     "Green": 20,
-                     "Maxi": 20
-                     }
-
-print(rcb_batter_scores)
-print(id(rcb_batter_scores))
-rcb_batter_scores.update({"DK": 35})
-print(id(rcb_batter_scores))
-
-
-aus_batter_scores = {"Warner" : 75, "Head" : 100, "Maxi": 1}
-
-# dict_a = {"Virat" : [56,23,234],
-#           "Rohit" : [23[4,5,6,6,6]]}
-
-
-# Boolan Data types
-
-print(id(bool(False)))
-print(id(bool(0.0)))
-print(id(bool(None)))
-print(id(bool('')))
-f = (2 == 3)
-print(id(f))
-
-print(bool('0'))
-print(bool(" "))
-
-from decimal import Decimal
-
-print(Decimal('0.1'))
+print(name + "is" + age)
+print()
