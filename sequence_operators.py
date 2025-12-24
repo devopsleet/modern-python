@@ -1,38 +1,23 @@
 string1 = "he's "
-
 string2 = "probably "
-
-string3 = "pining "
-
+string3 = "planning "
 string4 = "for the "
-
 string5 = "fjords"
 
+
 print(string1 + string2 + string3 + string4 + string5)
+name = "Gagan"
+greeting = "Hello"
+
+print(name,greeting)
+print(name,greeting, sep = "-")
+print(name+greeting)
+print("Hello" + "Gagan")
+print("Hello" "Gagan")
+
+print("Hello " * 5)
 
 
-var1 = 123
-var2 = "abc"
-
-var3 = 345
-
-print(var1, var2)
-# print(var1 + var2)
-print(var1, var3)
-
-print("abc" "def")
-print(var2 + "def")
-
-print("Gagan ""Singla"" is " + " an IT Engineer")
-
-
-print("Hello" * 5)
-
-print("Hello " * 5 + "4")
-
-
-today = "friday"
+today = "Friday"
 print("day" in today)
-print("fri" in today)
-print("thur" in today)
-print("parrot" in "fjord")
+print("Fri" in today)
