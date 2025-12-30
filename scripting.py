@@ -9,3 +9,14 @@ while True:
         print("We tried to pop up too many thinkers")
         print(e)
         break
+
+
+class FancyCar():
+    wheels = 4
+
+    def drivefast(self):
+        print("Driving fast")
+
+myCar = FancyCar()
+print(myCar.wheels)
+myCar.drivefast()
