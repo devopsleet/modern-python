@@ -1,25 +1,21 @@
 age = 24
-
+print("My age is " + str(age) + " years")
 print("My age is {0} years".format(age))
 
-print("There are {0} days in  {1}, {2}, {3}, {4}, {5}"
-      .format(31,"Jan", "March", "May", "July", "Aug"))
+
+# print("There are {0} dice in {1}, {2}, {3}, {4}, {5}, {6} and {7}"
+#       .format(31, "Jan", "Mar", "may"))
 
 
-print("There are {0} days in Jan, March".format(31))
+print("My name is {1} {0}".format("Singla", "Gagan"))
 
-print("Jan: {2}, Feb;{0}, Mar:{2}, Apr:{1}, May:{2}, Jun:{1}".format(28,30,31))
-
-print()
-
-print("""Jan: {2}
-Feb:{0}
-Mar:{2}
-Apr:{1}
-May:{2}
-Jun:{1}""".format(28,30,31))
+print(
+"""
+this is a \
+multiline
+"""
+)
 
 
-print("""
-Jan:{0}
-""".format(1))
+print(range(10))
+print(list(range(10)))

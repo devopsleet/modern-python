@@ -1,10 +1,11 @@
-file_path = 'file.txt'
-open_file = open(file_path, 'r')
-text = open_file.readlines()
-print(text)
-print(len(text))
-print(text[0])
+thinkers = ['Plato', 'PlayDo', 'Gummy']
 
-print(open_file)
+while True:
+    try:
+        thinker = thinkers.pop()
+        print(thinker)
 
-open_file.close()
+    except IndexError as e:
+        print("We tried to pop up too many thinkers")
+        print(e)
+        break
