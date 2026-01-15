@@ -1,13 +1,15 @@
-pangram = "The quick brown fox jumps over the lazy dog"
+# Selection Sort
 
-letters = sorted(pangram, key=str.casefold)
+nums = [7,3,2,5,6,10,9,8,1]
 
-print(letters)
+def selection_sort(nums):
+     n = len(nums)
 
-numbers = [2.3, 4.5, 6.7]
-sorted_numbers = sorted(numbers)
-print(sorted_numbers)
+     if n == 1:
+         return nums
 
-names = ["Graham", "John", "terry", "eric", "Terry", "michael"]
-names.sort(key=str.casefold)
-print(names)
+     curr = 0
+
+     for i in range(1,n):
+         min_element = min(nums[:])
+         nums[curr],
