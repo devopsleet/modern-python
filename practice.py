@@ -1,9 +1,13 @@
-name= input("please enter yiou name: ")
-age = int(input("How old are you, {0}? ".format(name)))
-print(age)
+from typing import List
 
-if age >= 18:
-    print("You are old enough to vote")
-    print("Please put an X in the box")
-else:
-    print("No")
+nums = [8,7,6,5,4,3,2,1]
+
+def selection_sort(nums: List[int]) -> None:
+
+
+
+    print(nums)
+
+
+selection_sort(nums)
+print(nums)
