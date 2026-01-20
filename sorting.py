@@ -12,7 +12,7 @@ def selection_sort(nums: List[int]) -> None:
         min_idx = i
         for j in range(i+1,n):
             if nums[j] < nums[min_idx]:
-                min = j
+                min_idx = j
 
         nums[i], nums[min_idx] = nums[min_idx], nums[i]
 
@@ -20,4 +20,22 @@ def selection_sort(nums: List[int]) -> None:
 
 
 selection_sort(nums)
+print(nums)
+
+
+def bubble_sort(nums):
+
+    n = len(nums)
+    if n < 2:
+        return None
+
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(n-1):
+            if nums[i] > nums[i+1]:
+                nums[i], nums[i+1] = nums[i+1], nums[i]
+                swapped = True
+
+bubble_sort(nums)
 print(nums)
