@@ -9,11 +9,22 @@ isConnected = [
 
 def calculate_provinces(isConnected: List[List[int]])->int:
 
+    # stack implementation of a neighboring towns
+
     def dfs(node):
-        for neighbor in graph[node]:
-            if neighbor not in seen:
-                seen.add(neighbor)
-                dfs(neighbor)
+        stack = [node]
+
+        while stack:
+            node = stack.pop()
+
+            for neighbor in graph[node]:
+                if neighbor not in seen:
+                    seen.add(neighbor)
+                    stack.append(neighbor)
+        # for neighbor in graph[node]:
+        #     if neighbor not in seen:
+        #         seen.add(neighbor)
+        #         dfs(neighbor)
 
     # build the graph
     n = len(isConnected)
