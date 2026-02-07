@@ -34,6 +34,7 @@ def calculate_provinces(isConnected: List[List[int]])->int:
             if isConnected[i][j]:
                 graph[i].append(j)
                 graph[j].append(i)
+                graph[]
 
     # need a set to track the visited nodes
     seen = set()
@@ -46,7 +47,9 @@ def calculate_provinces(isConnected: List[List[int]])->int:
             seen.add(i)
             dfs(i)
 
+
     return ans
+
 
 number_of_province = calculate_provinces(isConnected)
 print(number_of_province)

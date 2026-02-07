@@ -1,14 +1,13 @@
-computer_parts = ["computer",
+computer_parts = ["coumputer",
                   "monitor",
                   "keyboard",
                   "mouse",
-                  "mouse mat"
-                  ]
-print(computer_parts)
+                  "mouse mat"]
 
-# computer_parts[3] = "trackball"
-print(computer_parts[3:])
+for part in computer_parts:
+    print(part)
 
+print(computer_parts[2])
 
-computer_parts[3:] = ["trackball"]
-print(computer_parts)
+print(computer_parts[0:3])
+print(computer_parts[-1])
