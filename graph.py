@@ -1,38 +1,51 @@
-# Calculate the number of provinces
-import collections
+# calculate number of islands
+
 from typing import List
 
-isConnected = [
-     [1,1,0],
-     [1,1,0],
-     [0,0,1]
+grid = [
+    ["1","1","0","0","0"],
+    ["1","1","0","0","0"],
+    ["0","0","1","0","0"],
+    ["0","0","0","1","1"]
 ]
 
-def calculate_provinces(isConected: List[List[int]])->int:
+def number_of_islands(grid: List[List[str]])->int:
 
-    def dfs(node):
-        for neigbor in graph.get(node, []):
-            if neigbor not in seen:
-                seen.add(neigbor)
-                dfs(neigbor)
-    n = len(isConnected)
+    def isValid(a,b):
+        return 0 <= a < m and 0 <= b < n and grid[a][b] == "1"
+    def dfs(start_row, start_col):
+        for x,y in directions:
+            new_x, new_y = start_row + x, start_col+ y
+            if isValid(new_x, new_y) and (new_x, new_y) not in visited:
+                visited.add((new_x, new_y))
+                dfs(new_x, new_y)
 
-    graph = {}
 
-    for i in range(n):
-        for j in range(i+1,n):
-            if isConnected[i][j]:
-                graph.setdefault(i,[]).append(j)
-                graph.setdefault(j,[]).append(i)
+    # calculate number of rows
+    m = len(grid)
+    # calculate number of columns
+    n = len(grid[0])
 
-    seen = set()
-    ans =0
-    for i in range(n):
-        if i not in seen:
-            ans += 1
-            seen.add(i)
-            dfs(i)
+    # set 4 directions
+    directions = [(0,1),(1,0),(0,-1),(-1,0)]
+
+    # set visited array to track visited nodes
+    visited = set()
+
+    # answer variable
+    ans = 0
+
+    # traverse the grid
+    for r in range(m):
+        for c in range(n):
+            if grid[r][c] =="1" and (r,c) not in visited:
+                ans += 1
+                visited.add((r,c))
+                dfs(r,c)
+
+
     return ans
 
-answer = calculate_provinces(isConnected)
+
+answer = number_of_islands(grid)
 print(answer)
