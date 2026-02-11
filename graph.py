@@ -3,10 +3,7 @@
 from typing import List
 
 grid = [
-    ["1","1","0","0","0"],
-    ["1","1","0","0","0"],
-    ["0","0","1","0","0"],
-    ["0","0","0","1","1"]
+   ["1"]
 ]
 
 def number_of_islands(grid: List[List[str]])->int:
@@ -14,11 +11,20 @@ def number_of_islands(grid: List[List[str]])->int:
     def isValid(a,b):
         return 0 <= a < m and 0 <= b < n and grid[a][b] == "1"
     def dfs(start_row, start_col):
-        for x,y in directions:
-            new_x, new_y = start_row + x, start_col+ y
-            if isValid(new_x, new_y) and (new_x, new_y) not in visited:
-                visited.add((new_x, new_y))
-                dfs(new_x, new_y)
+        stack = [(start_row, start_col)]
+        while stack:
+            r,c = stack.pop()
+            for dx, dy in directions:
+                new_x, new_y = r + dx, c + dy
+                if isValid(new_x, new_y) and (new_x, new_y) not in visited:
+                    visited.add((new_x, new_y))
+                    dfs(new_x, new_y)
+
+        # for x,y in directions:
+        #     new_x, new_y = start_row + x, start_col+ y
+        #     if isValid(new_x, new_y) and (new_x, new_y) not in visited:
+        #         visited.add((new_x, new_y))
+        #         dfs(new_x, new_y)
 
 
     # calculate number of rows
