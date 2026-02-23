@@ -1,33 +1,28 @@
-# merge sort
+# quick sort
 
 nums = [1,5,3,2,8,7,6,4]
 
-def merge_sort(nums):
-    if len(nums) <= 1:
-        return nums
+def quick_sort(nums):
 
-    pivot = int(len(nums)/2)
-    p = merge_sort(nums[0:pivot])
-    q = merge_sort(nums[pivot:])
-    return merge(p,q)
+    n = len(nums)
+    qsort(nums, 0, n-1)
 
-def merge(p,q):
-    left = right = 0
+def qsort(nums,lo,hi):
 
-    ans = []
+    if lo < hi:
+        p = partition(nums,lo,hi)
+        qsort(nums,lo,p-1)
+        qsort(nums,p+1, hi)
 
-    while left < len(p) and right < len(q):
-        if p[left] < q[right]:
-            ans.append(p[left])
-            left += 1
-        else:
-            ans.append(q[right])
-            right += 1
+def partition(nums,lo,hi):
+    pivot = nums[hi]
+    i = lo
+    for j in range(lo,hi):
+        if nums[j] < pivot:
+            nums[i],nums[j] = nums[j], nums[i]
+            i+=1
+    nums[i],nums[hi] = nums[hi], nums[i]
+    return i
 
-    ans.extend(p[left:])
-    ans.extend(q[right:])
-
-    return ans
-
-answer = merge_sort(nums)
-print(answer)
+quick_sort(nums)
+print(nums)
