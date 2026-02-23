@@ -3,7 +3,10 @@
 from typing import List
 
 grid = [
-   ["1"]
+    ["0","0","0","0","0"],
+    ["0","0","0","0","0"],
+    ["0","1","1","0","0"],
+    ["0","0","0","0","0"]
 ]
 
 def number_of_islands(grid: List[List[str]])->int:
