@@ -1,38 +1,33 @@
-from typing import List
+# merge sort
 
-nums = [8,7,6,5,4,3,2,1]
+nums = [1,5,3,2,8,7,6,4]
 
-def SortArray(nums):
+def merge_sort(nums):
+    if len(nums) <= 1:
+        return nums
 
-    p = 0
-    r = len(nums) - 1
+    pivot = int(len(nums)/2)
+    p = merge_sort(nums[0:pivot])
+    q = merge_sort(nums[pivot:])
+    return merge(p,q)
 
-    mergeSort(nums,p,r)
-
-def mergeSort(nums, p, r):
-
-    if p < r:
-        q = (p+r)//2
-
-        mergeSort(nums,p, q)
-        mergeSort(nums, q+1,r)
-        merge(nums,p,q,r)
-
-def merge(nums,p,q,r):
-
-    n1 = q-p + 1
-    n2 = r-q+1
-
-    arr1 = []
-    for i in range(n1):
-        arr1.append(nums[i])
-
-    arr1.append(float('inf'))
-
-    arr2 = []
-    for j in range(n2):
-        arr2.append(nums[j])
-    arr2.append(float('inf'))
+def merge(p,q):
+    left = right = 0
 
     ans = []
-    for k in range(p,r-1)
+
+    while left < len(p) and right < len(q):
+        if p[left] < q[right]:
+            ans.append(p[left])
+            left += 1
+        else:
+            ans.append(q[right])
+            right += 1
+
+    ans.extend(p[left:])
+    ans.extend(q[right:])
+
+    return ans
+
+answer = merge_sort(nums)
+print(answer)
