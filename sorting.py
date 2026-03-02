@@ -1,22 +1,21 @@
-from collections import Counter
+nums = [7,9,4,1,3,2,6,5,8]
 
-# nums = [4,5,5,2,1,1,1,5,2,3,3,5,2]
-# k = 3
+def selection_sort(nums):
 
+    n = len(nums)
 
-nums = [4,5,5,2,1,1,1,5,2,3,3,5,2]
+    if n < 2:
+        return nums
 
+    # i = 0
+    # min_index = i
 
-count = Counter(nums)
+    for i in range(n):
+        minIndex = i
+        for j in range(i+1, n):
+            if nums[j] < nums[minIndex]:
+                minIndex = j
+        nums[minIndex], nums[i] = nums[i], nums[minIndex]
 
-print(count)
-unique = list(count.keys())
-print(unique)
-k = 3
-
-def quick_select(unique, k):
-
-    n = len(unique)
-
-    left = 0
-    right = n - 1
+selection_sort(nums)
+print(nums)
