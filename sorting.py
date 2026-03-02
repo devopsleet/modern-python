@@ -17,5 +17,24 @@ def selection_sort(nums):
                 minIndex = j
         nums[minIndex], nums[i] = nums[i], nums[minIndex]
 
-selection_sort(nums)
+# selection_sort(nums)
+# print(nums)
+
+
+def bubble_sort(nums):
+
+    n = len(nums)
+
+    if n < 2:
+        return nums
+
+    Swapped = True
+    while Swapped:
+        Swapped = False
+        for i in range(n-1):
+            if nums[i] > nums[i+1]:
+                nums[i], nums[i+1] = nums[i+1], nums[i]
+                Swapped = True
+
+bubble_sort(nums)
 print(nums)
