@@ -16,10 +16,17 @@ computer_parts = []
 
 while current_choice != '0':
     if current_choice in valid_choices:
-        print("Adding {}".format(current_choice))
+        # print("Adding {}".format(current_choice))
         index = int(current_choice) - 1
         chosen_part = available_parts[index]
-        computer_parts.append(chosen_part)
+        if chosen_part in computer_parts:
+            # remove it
+            print("Removing {}".format(current_choice))
+            computer_parts.remove(chosen_part)
+        else:
+            print("Adding {}".format(current_choice))
+            computer_parts.append(chosen_part)
+        print("Your list now contains : {}".format(computer_parts))
         # if current_choice == '1':
         #     computer_parts.append("computer")
         # elif current_choice == '2':
