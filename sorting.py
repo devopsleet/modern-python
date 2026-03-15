@@ -1,40 +1,44 @@
-nums = [7,9,4,1,3,2,6,5,8]
+# merge sort
 
-def selection_sort(nums):
+from typing import List
 
-    n = len(nums)
+#nums = [5,1,1,2,0,0]
 
-    if n < 2:
-        return nums
+def mergeSort(nums: List[int], p: int, r: int)-> List[int]:
 
-    # i = 0
-    # min_index = i
+    if p < r:
+        q = (p+r)//2
+        mergeSort(nums, p,q)
+        mergeSort(nums,q+1,r)
+        merge(nums,p,q,r)
 
-    for i in range(n):
-        minIndex = i
-        for j in range(i+1, n):
-            if nums[j] < nums[minIndex]:
-                minIndex = j
-        nums[minIndex], nums[i] = nums[i], nums[minIndex]
+def merge(nums,p,q,r):
+    n1 = q-p + 1
+    n2 = r-q
 
-# selection_sort(nums)
-# print(nums)
+    list1 = [0] * (n1+1)
 
+    for i in range(n1):
+        list1[i] = nums[p+i]
 
-def bubble_sort(nums):
+    list1[-1] = float('inf')
 
-    n = len(nums)
+    list2 = [0] * (n2+1)
 
-    if n < 2:
-        return nums
+    for i in range(n2):
+        list2[i] = nums[q+i+1]
 
-    Swapped = True
-    while Swapped:
-        Swapped = False
-        for i in range(n-1):
-            if nums[i] > nums[i+1]:
-                nums[i], nums[i+1] = nums[i+1], nums[i]
-                Swapped = True
+    list2[-1] = float('inf')
 
-bubble_sort(nums)
+    i = j = 0
+
+    for k in range(p,r+1):
+        if list1[i] <= list2[j]:
+            nums[k] = list1[i]
+            i += 1
+        else:
+            nums[k] = list2[j]
+            j += 1
+
+mergeSort(nums,0, len(nums)-1)
 print(nums)
