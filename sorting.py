@@ -1,25 +1,19 @@
-# Quick Sort
+pangram = "The quick brown fox jumps over the lazy dog"
 
-from typing import List
+letters = sorted(pangram)
 
-nums = [5,1,1,2,0,0]
+print(letters)
 
-def quickSort(nums: List[int], p: int, r: int):
-    if p < r:
-        q = partition(nums,p,r)
-        quickSort(nums,p,q-1)
-        quickSort(nums,q+1,r)
+missing_letters = sorted("The quick brown fox jumped over the lazy dog",
+                         key=str.casefold)
+print(missing_letters)
 
-def partition(nums: List[int], p:int, r:int):
-    pivot = nums[r]
+numbers = [2.3,4.5,8.7,3.1,9.2]
 
-    i = p-1
-    for j in range(p,r):
-        if nums[j] <= pivot:
-            i += 1
-            nums[i], nums[j] = nums[j], nums[i]
-    nums[i+1], nums[r] = nums[r], nums[i+1]
-    return i+1
+sorted_numbers = sorted(numbers, reverse=True)
+print(sorted_numbers)
 
-quickSort(nums, 0, len(nums) -1)
-print(nums)
+new_list = ['T', 'h', 'e']
+new_list.sort(key=str.casefold)
+
+print(new_list)
