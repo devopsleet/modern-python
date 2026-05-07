@@ -1,31 +1,21 @@
-class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+from typing import List
+def flip(nums:str)-> int:
+    l = 0
+    count = 0
+    ans = 0
 
-        def heapify_top_down(n, i):
-            largest = i
+    for r in range(len(nums)):
+        if nums[r] == "0":
+            count = count + 1
 
-            lc = (2 * i) + 1
-            rc = (2 * i) + 2
+        while count > 1  and l < len(nums):
+            if nums[l] == "0":
+                count = count - 1
+            l += 1
 
-            if lc < n and nums[lc] > nums[largest]:
-                largest = lc
-            if rc < n and nums[rc] > nums[largest]:
-                largest = rc
+        ans = max(ans, r - l + 1)
 
-            if largest != i:
-                nums[i], nums[largest] = nums[largest], nums[i]
-                heapify_top_down(n, largest)
+    return ans
 
-        def  heap_sort():
-
-            n = len(nums)
-
-            for i in range(n//2-1, -1, -1):
-                heapify_top_down(n, i)
-
-            for i in range(n-1,0,-1):
-                nums[i], nums[0] = nums[0], nums[i]
-                heapify_top_down(i,0)
-
-        heap_sort()
-        return nums
+ans = flip("1111100111")
+print(ans)
