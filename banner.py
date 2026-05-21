@@ -1,4 +1,4 @@
-def banner_text(text: str = "", screen_width: int = 80) -> None:
+def banner_text(text: str = " ", screen_width: int = 50) -> None:
     """
     Get a text as input from user and print it on the screen with the screen width param
 
@@ -19,7 +19,7 @@ def banner_text(text: str = "", screen_width: int = 80) -> None:
         print(output_string)
 
 
-banner_text("*", 6)
+banner_text("*", 60)
 banner_text("Always look on the bright side of life...", 50)
 banner_text("If life seems jolly rotten,")
 banner_text("There's something you've forgotten!")
@@ -30,9 +30,3 @@ banner_text("Don't be silly chumps,")
 banner_text("Just purse your lips and whistle - that's the thing!")
 banner_text("And... always look on the bright side of life...")
 banner_text("*")
-
-# result = banner_text("Nothing is returned")
-# print(result)
-#
-# numbers = [4, 2, 7, 5, 8, 3, 9, 6, 1]
-# print(numbers.sort())
