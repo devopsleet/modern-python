@@ -1,21 +1,27 @@
-from typing import List
-def flip(nums:str)-> int:
+from collections import defaultdict
+
+def mostDistinctChar(s: str, k :int) -> int:
+
+    hashmap = defaultdict(int)
+
     l = 0
-    count = 0
     ans = 0
+    n = len(s)
+    for r,char in enumerate(s):
+        hashmap[char] += 1
 
-    for r in range(len(nums)):
-        if nums[r] == "0":
-            count = count + 1
-
-        while count > 1  and l < len(nums):
-            if nums[l] == "0":
-                count = count - 1
+        while len(hashmap) > k  and l < n:
+            curr_char = s[l]
             l += 1
+            hashmap[curr_char] -= 1
+            if hashmap[curr_char] == 0:
+                del hashmap[curr_char]
 
-        ans = max(ans, r - l + 1)
+        ans = max(ans, r-l+1)
 
     return ans
 
-ans = flip("1111100111")
+
+
+ans  = mostDistinctChar("eceba",2)
 print(ans)
