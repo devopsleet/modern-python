@@ -39,6 +39,3 @@ for number in range(LOW, HIGH + 1):
 
     if number_of_guesses > max_guesses:
         max_guesses, correct_count = number_of_guesses,1
-
-
-def my_name

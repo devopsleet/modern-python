@@ -1,10 +1,47 @@
-from typing import Optional
 class ListNode:
-    def __init__(self, val=0, next= None):
+    def __init__(self, val):
         self.val = val
-        self.next = next
+        self.prev = None
+        self.next = None
 
-class Solution:
-    def swapPairs(self, head: Optional[ListNode])-> Optional[ListNode]:
-        if not head or not head.next:
-            return head
+
+    def add_to_start(node_to_add):
+        node_to_add.prev = head
+        node_to_add.next = head.next
+        head.next.prev = node_to_add
+        head.next = node_to_add
+
+    def add_to_end(node_to_add):
+        node_to_add.next = tail
+        node_to_add.prev = tail.prev
+        tail.prev.next = node_to_add
+        tail.prev = node_to_add
+
+    def remove_from_start(self):
+        if head.next == tail:
+            return
+        node_to_remove = head.next
+        node_to_remove.next.prev = head
+        head.next = node_to_remove.next
+
+    def remove_from_end(self):
+        if head == tail:
+            return
+        node_to_remove = tail.prev
+        node_to_remove.prev.next = tail
+        tail.prev = node_to_remove.prev
+
+
+
+
+
+
+
+head = ListNode(None)
+tail = ListNode(None)
+head.next = tail
+tail.prev = head
+One = ListNode(1)
+
+l = ListNode()
+l.add_to_start(One)

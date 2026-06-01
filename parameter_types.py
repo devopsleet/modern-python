@@ -1,8 +1,8 @@
-def func(p1, p2, *args, k, **kwargs):
-    print("positional-or-keyword:..... {}  {}".format(p1, p2))
-    print("var-positional (*args):...{}".format(args))
-    print("keyword:..............{}".format(k))
-    print("var-keyword:.........{}".format(kwargs))
+def func(p1, *args, K,**kwargs):
+    print("positional-or-keyword:.....{},{}".format(p1,p2))
+    print("var-positional (*args)...{}".format(args))
+    print("keywords:........................{}".format(K))
+    print("var-keyword:.....................{}".format(kwargs))
 
 
-func(1, 2, 3, 4, 5, k=6, key1=1, key2=2)
+func(10,3,4,5,K=6, Key1=1, Key2=2)
