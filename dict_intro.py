@@ -9,5 +9,15 @@ vehicles = {
     'fiesta': 'Ford Fiesta Ghia 1.4',
     'roadster': 'Triumph Street Triple'
 }
-my_car = vehicles['fiesta']
-print(my_car)
+
+vehicles["starfighter"] = "Locked F-104"
+vehicles["learjet"] = ["bombardier lier jet"]
+
+vehicles["toy"] = "glider"
+
+for key, value in vehicles.items():
+    print(key, value, sep= ", ")
+
+
+# Upgarde the viraga
+vehicles[""]
