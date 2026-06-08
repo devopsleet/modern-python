@@ -1,9 +1,18 @@
-class Vehicle:
+class Engine:
     def start(self):
-        print("Vehicle started")
+        print("Engine started")
 
-class Car(Vehicle):
-    pass
+class Car:
+    def __init__(self,engine):
+        self.engine = Engine()
 
-c = Car()
+    def start(self):
+        self.engine.start()
+
+
+class ElectricEngine:
+    def start(self):
+        print("Electric motor start")
+
+c = Car(ElectricEngine())
 c.start()

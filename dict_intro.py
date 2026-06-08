@@ -9,15 +9,23 @@ vehicles = {
     'fiesta': 'Ford Fiesta Ghia 1.4',
     'roadster': 'Triumph Street Triple'
 }
-
 vehicles["starfighter"] = "Locked F-104"
 vehicles["learjet"] = ["bombardier lier jet"]
-
 vehicles["toy"] = "glider"
 
-for key, value in vehicles.items():
-    print(key, value, sep= ", ")
+#
+# del vehicles["sdcsdsds"]
 
 
-# Upgarde the viraga
-vehicles[""]
+
+output = vehicles.pop('er51', 'This key does not exist')
+print(output)
+
+nums = [1,2,3,4,5]
+print(nums.pop(2))
+#
+# for key, value in vehicles.items():
+#     print(key, value, sep= ", ")
+
+
+# Upgarde the virag
