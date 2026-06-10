@@ -26,3 +26,11 @@ while True:
         print("checking ingredients")
         ingredients = recipes[selected_item]
         print(ingredients)
+        need_to_by = {}
+        for ingredient, required_quantity in ingredients.items():
+            quantity_in_pantry = pantry.get(ingredient, 0)
+            if required_quantity < quantity_in_pantry:
+                print(f"{ingredient} OK")
+            else:
+                quantity_delta = required_quantity - quantity_in_pantry
+                need_to_by[ingredient] = need_to_by.get(ingredient,quantity_delta)
