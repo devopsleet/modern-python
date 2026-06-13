@@ -1,4 +1,4 @@
-d = {
+d1 = {
     0: "zero",
     1: "one",
     2: "two",
@@ -13,11 +13,15 @@ d = {
 
 pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
 
-# d2 = {
-#     7  : "lucky seven",
-#     10 : "ten",
-#     3  :   "this is new three"
-# }
+d2 = {
+    7  : "lucky seven",
+    10 : "ten",
+    3  :   "this is new three"
+}
+
+d1 |= d2
+
+print(d1)
 #
 #
 #
