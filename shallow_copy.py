@@ -6,12 +6,20 @@ animals = {
     "teddy": ["cuddly", "stuffed"]
 }
 
-things = animals.copy()
-#animals["teddy"] = "toy"
+# Perform a shallow copy
+things = copy.deepcopy(animals)
+
+# Perform a deep copy
+
+#things = animals.copy()
+# things["teddy"] = ["toy"]
+
+print(animals["teddy"])
 print(things["teddy"])
 
 print()
 
 things["teddy"].append("toy")
-print(things["teddy"])
+
 print(animals["teddy"])
+print(things["teddy"])

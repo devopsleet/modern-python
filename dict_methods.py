@@ -1,4 +1,4 @@
-d1 = {
+d = {
     0: "zero",
     1: "one",
     2: "two",
@@ -13,33 +13,49 @@ d1 = {
 
 pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
 
-d2 = {
-    7  : "lucky seven",
-    10 : "ten",
-    3  :   "this is new three"
-}
+v = d.values()
+print(v)
 
-d1 |= d2
+d[10] = "ten"
+print(v)
 
-print(d1)
-#
-#
-#
-# d.update(d2)
-# for key, value in d.items():
-#     print(key, value)
-#
-# print()
-#
-# d.update(enumerate(pantry_items))
-# for key, value in d.items():
-#     print(key, value)
+print("four" in v)
+print("eleven" in v)
 
-# Code for "The remaining `dict`
+keys = list(d.keys)
+values = list(v)
 
-
-new_dict = dict.fromkeys(pantry_items, 1)
-print(new_dict)
+if "four" in values:
+    index = values.index("four")
+    key = keys[index]
+    print(f"{}")
+# d2 = {
+#     7  : "lucky seven",
+#     10 : "ten",
+#     3  :   "this is new three"
+# }
 #
-# keys = d.keys()
-# print(keys)
+# d1 |= d2
+#
+# print(d1)
+# #
+# #
+# #
+# # d.update(d2)
+# # for key, value in d.items():
+# #     print(key, value)
+# #
+# # print()
+# #
+# # d.update(enumerate(pantry_items))
+# # for key, value in d.items():
+# #     print(key, value)
+#
+# # Code for "The remaining `dict`
+#
+#
+# new_dict = dict.fromkeys(pantry_items, 1)
+# print(new_dict)
+# #
+# # keys = d.keys()
+# # print(keys)
