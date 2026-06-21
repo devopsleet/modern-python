@@ -1,34 +1,23 @@
-string = input('Enter the String = ')
+import math
 
-N = int(1e5)
 P = 31
+N = 10 ** 5
 PP = [1] * (N+1)
-M = int(1e9) + 7
+MOD = 10 ** 9 + 7
 
-for i in range(1, N+1):
-    PP[i] = (PP[i-1] * P) % M
+def main():
+    for i in range(1,N+1):
+        PP[i] = (PP[i-1] * P) % MOD
 
-
-def hashing(s):
+def polynomial_hash(s: str)->int:
     ans = 0
-    n = len(s)
-    for i in range(n):
-        ans = (ans + (ord(s[i]) - ord('a') + 1) * PP[i]) % M
+    for i in range(len(s)):
+        ans = (ans + (ord(s[i]) - ord('a') + 1)*PP[i])%MOD
     return ans
 
 
-result = hashing(string)
-print(result)
-
-
-def count_unique_substrings(s):
-
-    ans = set()
-    n = len(s)
-
-    last_hash = 0
-    for i in range(n):
-        for j in range(i,n):
-            last_hash = last_hash + ()
-
-    return ans.size()
+if __name__ == "__main__":
+    main()
+    s = input("Enter the string ")
+    output = polynomial_hash(s)
+    print(output)

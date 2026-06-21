@@ -35,24 +35,3 @@ restricted_items = {
     "scissors",
     "shampoo",
 }
-
-print("Please choose your mode of travel:")
-for key, value in travel_mode.items():
-    print(f"{key}: {value}")
-    # Python 3.5 and earlier
-    # print("{}: {}".format(key, value))
-
-mode = "-"
-while mode not in travel_mode:
-    mode = input("> ")
-
-if mode == "2":
-    # travelling by plane, remove restricted items
-    for restricted_item in restricted_items:
-        #items.remove(restricted_item)
-        items.remove(restricted_item)
-
-# print the packing list
-print("You need to pack:")
-for item in sorted(items):
-    print(item)
