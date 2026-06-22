@@ -1,9 +1,10 @@
+# open the file with a read mode
 jabber = open('jabberwocky.txt', 'r')
 
-
 for line in jabber:
-    print(line.strip(), end='')
-    # print(len(line))
 
+    line.strip()
+    print(line.rstrip())
+    #print(len(line))
 
 jabber.close()
