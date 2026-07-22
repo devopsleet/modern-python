@@ -1,47 +1,15 @@
 class ListNode:
     def __init__(self, val):
-        self.val = val
-        self.prev = None
-        self.next = None
+        self. val = val
+        self. link = None
 
+one = ListNode(1)
+two = ListNode(2)
+three = ListNode(3)
 
-    def add_to_start(node_to_add):
-        node_to_add.prev = head
-        node_to_add.next = head.next
-        head.next.prev = node_to_add
-        head.next = node_to_add
+one.next = two
+two.next = three
 
-    def add_to_end(node_to_add):
-        node_to_add.next = tail
-        node_to_add.prev = tail.prev
-        tail.prev.next = node_to_add
-        tail.prev = node_to_add
+head = one
 
-    def remove_from_start(self):
-        if head.next == tail:
-            return
-        node_to_remove = head.next
-        node_to_remove.next.prev = head
-        head.next = node_to_remove.next
-
-    def remove_from_end(self):
-        if head == tail:
-            return
-        node_to_remove = tail.prev
-        node_to_remove.prev.next = tail
-        tail.prev = node_to_remove.prev
-
-
-
-
-
-
-
-head = ListNode(None)
-tail = ListNode(None)
-head.next = tail
-tail.prev = head
-One = ListNode(1)
-
-l = ListNode()
-l.add_to_start(One)
+print(head.val)
