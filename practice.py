@@ -1,7 +1,13 @@
-class FancyCar():
-    pass
+a = 5
 
-print(type(FancyCar))
+print(a + a)
 
-my_car = FancyCar()
-print(type(my_car))
+a = a + a
+
+print(a)
+print(type(a))
+
+
+a = 30.1
+
+print(type(a))
