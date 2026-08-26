@@ -23,3 +23,7 @@ class Solution:
                 return speed
             else:
                 speed += 1
+
+
+[7,10,3,9,4,2]
+[2,5,6,2,1,4]
